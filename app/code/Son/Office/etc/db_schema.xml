@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="department" resource="default" engine="innodb" comment="Department Table">
+        <column name="entity_id" xsi:type="smallint" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column name="name" xsi:type="varchar" nullable="false" length="100" comment="Name"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>
