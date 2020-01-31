@@ -1,0 +1,16 @@
+<?php $empl = $block->getEmpl() ?>
+
+<?php foreach ($empl as $item) : ?>
+    <p>ID: <?= $item->getData('entity_id') ?></p>
+    <p>Department ID<?= $item->getData('department_id') ?></p>
+    <p>Email: <?= $item->getData('email') ?></p>
+    <p>Firstname: <?= $item->getData('firstname') ?></p>
+    <p>Lastname: <?= $item->getData('lastname') ?></p>
+    <p>Date of birth: <?= $item->getData('dob') ?></p>
+    <p>Note: <?= $item->getData('note') ?></p>
+    <p>Salary: <?= $item->getData('salary') ?></p>
+    <p>Service years: <?= $item->getData('service_years') ?></p>
+    <p>VAT Number: <?= $item->getData('vat_number') ?></p>
+    <hr><br/><br/>
+<?php endforeach; ?>
+

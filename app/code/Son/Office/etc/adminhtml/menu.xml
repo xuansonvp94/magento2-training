@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Son_Office::main_menu"
+             title="Office"
+             resource="Son_Office::main_menu"
+             module="Son_Office"
+             sortOrder="10"/>
+
+        <add id="Son_Office::office"
+             title="Offices"
+             module="Son_Office"
+             sortOrder="10"
+             parent="Son_Office::main_menu"
+             dependsOnModule="Son_Office"
+             resource="Son_Office::Office"/>
+    </menu>
+</config>
