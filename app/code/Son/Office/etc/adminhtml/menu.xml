@@ -14,5 +14,12 @@
              parent="Son_Office::main_menu"
              dependsOnModule="Son_Office"
              resource="Son_Office::Office"/>
+
+       <!-- <add id="Son_Office::department"
+        title="Departments"
+        module="Son_Office"
+        sortOrder="10"
+        parent="Son_Office::office"
+        resource="Son_Office::department"/>-->
     </menu>
 </config>
