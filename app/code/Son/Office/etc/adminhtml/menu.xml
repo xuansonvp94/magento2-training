@@ -6,7 +6,7 @@
              resource="Son_Office::main_menu"
              module="Son_Office"
              sortOrder="10"/>
-
+       <!-- menu chính trong admin, logo-->
         <add id="Son_Office::office"
              title="Offices"
              module="Son_Office"
@@ -15,11 +15,21 @@
              dependsOnModule="Son_Office"
              resource="Son_Office::Office"/>
 
-       <!-- <add id="Son_Office::department"
-        title="Departments"
-        module="Son_Office"
-        sortOrder="10"
-        parent="Son_Office::office"
-        resource="Son_Office::department"/>-->
+        <!--Menu khi click vào menu chính-->
+        <add id="Son_Office::department"
+             title="Departments"
+             module="Son_Office"
+             sortOrder="10"
+             parent="Son_Office::office"
+             resource="Son_Office::department"
+             action="son/department/index"/>
+
+        <add id="Son_Office::employee"
+             title="Employees"
+             module="Son_Office"
+             sortOrder="10"
+             parent="Son_Office::office"
+             resource="Son_Office::employee"
+             action="son/employee/index"/>
     </menu>
 </config>

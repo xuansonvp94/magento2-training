@@ -8,15 +8,15 @@ use Magento\Framework\View\Element\Template;
 
 class Employee extends \Magento\Framework\View\Element\Template
 {
-    public $empl;
-    public function __construct(Template\Context $context, array $data = [],\Son\Office\Model\ResourceModel\Employee\CollectionFactory $empl)
+    public $employee;
+    public function __construct(Template\Context $context, array $data = [],\Son\Office\Model\ResourceModel\Employee\CollectionFactory $employee)
     {
-        $this->empl = $empl;
+        $this->employee = $employee;
         parent::__construct($context, $data);
     }
 
-    public function getEmpl(){
-        $collection = $this->empl->create();
+    public function getEmployee(){
+        $collection = $this->employee->create();
         $collection->addAttributeToSelect('*');
         $collection->load();
         return $collection;

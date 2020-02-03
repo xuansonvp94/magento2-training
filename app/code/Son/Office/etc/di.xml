@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Khai báo đầu vào nguồn dữ liệu collection-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Son\Office\Model\ResourceModel\Department\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">son_office_department</argument>
+            <argument name="resourceModel" xsi:type="string">Son\Office\Model\ResourceModel\Department</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="son_office_listing_data_source_department" xsi:type="string">Son\Office\Model\ResourceModel\Department\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Son\Office\Model\ResourceModel\Employee\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">son_office_employee_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Son\Office\Model\ResourceModel\Employee</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="son_office_listing_data_source_employee" xsi:type="string">Son\Office\Model\ResourceModel\Employee\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!--Define plugins-->
+    <type name="Magento\Catalog\Block\Product\AbstractProduct">
+        <plugin name="officePlugin1" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin1" disabled="false" sortOrder="100"/>
+        <plugin name="officePlugin2" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin2" disabled="false" sortOrder="200"/>
+        <plugin name="officePlugin3" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin3" disabled="false" sortOrder="300"/>
+    </type>
+</config>

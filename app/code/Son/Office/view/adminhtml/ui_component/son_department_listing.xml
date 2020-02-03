@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">son_department_listing.son_office_listing_data_source_department</item>
+            <item name="deps" xsi:type="string">son_department_listing.son_office_listing_data_source_department</item>
+        </item>
+        <item name="spinner" xsi:type="string">son_office_collumn</item>
+        <item name="buttons" xsi:type="array">
+            <item name="name" xsi:type="string">add</item>
+            <item name="label" xsi:type="string">Add New Department</item>
+            <item name="class" xsi:type="string">primary</item>
+            <item name="url" xsi:type="string"></item>
+        </item>
+    </argument>
+</listing>
