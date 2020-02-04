@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--Define a new cron job in Magento cron-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <!--instance: class sẽ được khởi tạo, method: method bên trong class cần được thực thi-->
+        <job name="son_office_logHello" instance="Son\Office\Model\Cron" method="logHello">
+            <!--schedule: chỉ định thời gian mong muốn của job execution. */2**** every 2 minutes-->
+            <schedule>*/2 * * * *</schedule>
+        </job>
+    </group>
+</config>
