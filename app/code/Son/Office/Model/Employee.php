@@ -2,10 +2,10 @@
 
 namespace Son\Office\Model;
 
-class Employee extends \Magento\Framework\Model\AbstractModel
-{
-    const ENTITY = 'son_office_employee';
+use Magento\Framework\Model\AbstractModel;
 
+class Employee extends AbstractModel
+{
     protected function _construct()
     {
         $this->_init(\Son\Office\Model\ResourceModel\Employee::class);

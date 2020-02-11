@@ -2,7 +2,13 @@
 
 namespace Son\Office\Model\ResourceModel\Employee;
 
-class Collection extends \Magento\Eav\Model\Entity\Collection\AbstractCollection
+use Magento\Eav\Model\Entity\Collection\AbstractCollection;
+
+/**
+ * Class Collection
+ * @package Son\Office\Model\ResourceModel\Employee
+ */
+class Collection extends AbstractCollection
 {
     protected function _construct()
     {

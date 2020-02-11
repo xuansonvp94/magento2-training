@@ -2,19 +2,15 @@
 
 namespace Son\Office\Model\ResourceModel;
 
-class Employee extends \Magento\Eav\Model\Entity\AbstractEntity
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+class Employee extends AbstractDb
 {
-    /**
-     * Entity type getter and lazy loader
-     *
-     * @return \Magento\Eav\Model\Entity\Type
-     * @throws \Magento\Framework\Exception\LocalizedException
-     */
-    public function getEntityType()
+    protected function _construct()
     {
-        if (empty($this->_type)) {
-            $this->setType(\Son\Office\Model\Employee::ENTITY);
-        }
-        return parent::getEntityType();
+        $this->_init(
+            'son_office_employee_entity',
+            'entity_id'
+        );
     }
 }
