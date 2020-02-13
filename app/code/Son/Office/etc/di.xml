@@ -18,9 +18,12 @@
     <virtualType name="Son\Office\Model\ResourceModel\Employee\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">son_office_employee_entity</argument>
+            <argument name="eventPreFix" xsi:type="string">son_office_employee_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">son_office_employee_grid_collection</argument>
             <argument name="resourceModel" xsi:type="string">Son\Office\Model\ResourceModel\Employee</argument>
         </arguments>
     </virtualType>
+
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">

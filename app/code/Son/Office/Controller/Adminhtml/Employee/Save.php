@@ -1,14 +1,14 @@
 <?php
 
-namespace Son\Office\Controller\Adminhtml\Department;
+namespace Son\Office\Controller\Adminhtml\Employee;
 
-use Son\Office\Controller\Adminhtml\Department;
+use Son\Office\Controller\Adminhtml\Employee;
 
 /**
  * Class Save
- * @package Son\Office\Controller\Adminhtml\Department
+ * @package Son\Office\Controller\Adminhtml\Employee
  */
-class Save extends Department
+class Save extends Employee
 {
     /**
      * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\Result\Redirect|\Magento\Framework\Controller\ResultInterface
@@ -17,23 +17,22 @@ class Save extends Department
     {
         $resultRedirect = $this->resultRedirectFactory->create();
         $modelId = (int)$this->getRequest()->getParam('entity_id');
-        $data['name'] = $this->getRequest()->getPostValue('name');
+        $data = $this->getRequest()->getPostValue();
         if(!$data) {
             return $resultRedirect->setPath('*/*/');
         }
 
         if($modelId) {
-            $model = $this->_objectManager->create('Son\Office\Model\Department')
+            $model = $this->_objectManager->create('Son\Office\Model\Employee')
                 ->load($modelId);
-            $data['entity_id'] = $modelId;
         } else {
-            $model = $this->_objectManager->create('Son\Office\Model\Department');
+            $model = $this->_objectManager->create('Son\Office\Model\Employee');
         }
 
         $model->setData($data);
         try {
             $model->save();
-            $this->messageManager->addSuccessMessage('Department was successfully saved');
+            $this->messageManager->addSuccessMessage('Employee was successfully saved');
         } catch (\Exception $e) {
             $this->messageManager->addErrorMessage($e->getMessage());
             return  $resultRedirect->setPath('*/*/edit', ['id' => $this->getRequest()->getParam('entity_id')]);

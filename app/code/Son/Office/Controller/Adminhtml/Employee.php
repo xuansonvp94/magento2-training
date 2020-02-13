@@ -8,7 +8,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\LayoutFactory;
 use Magento\Framework\View\Result\PageFactory;
 
-abstract class Department extends Action
+abstract class Employee extends Action
 {
     /**
      * @var ForwardFactory
@@ -50,9 +50,9 @@ abstract class Department extends Action
     protected function _initAction()
     {
         $resultPage = $this->pageFactory->create();
-        $resultPage->setActiveMenu('Son_Office:department');
+        $resultPage->setActiveMenu('Son_Office:employee');
         $resultPage->addBreadcrumb(__('Office'), __('Office'));
-        $resultPage->addBreadcrumb(__('Department'), __('Department'));
+        $resultPage->addBreadcrumb(__('Employee'), __('Employee'));
         return $resultPage;
     }
 }

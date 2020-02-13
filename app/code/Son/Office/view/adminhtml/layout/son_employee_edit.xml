@@ -2,14 +2,15 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="styles"/>
+    <update handle="editor"/>
     <body>
         <referenceBlock name="menu">
             <action method="setActive">
-                <argument name="itemId" xsi:type="string">Son_Office::main_menu</argument>
+                <argument name="itemId" xsi:type="string">Son_Offcie::main_menu</argument>
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <uiComponent name="son_employee_listing"/>
+            <uiComponent name="son_employee_edit"/>
         </referenceContainer>
     </body>
 </page>
