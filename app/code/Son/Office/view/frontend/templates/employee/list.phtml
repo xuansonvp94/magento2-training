@@ -1,16 +1,22 @@
-<?php $employee = $block->getEmployee() ?>
+<?php
+    $employee = $block->getEmployee();
+?>
 
-<?php foreach ($employee as $item) : ?>
-    <p>ID: <?= $item->getData('entity_id') ?></p>
-    <p>Department ID<?= $item->getData('department_id') ?></p>
-    <p>Email: <?= $item->getData('email') ?></p>
-    <p>Firstname: <?= $item->getData('firstname') ?></p>
-    <p>Lastname: <?= $item->getData('lastname') ?></p>
-    <p>Date of birth: <?= $item->getData('dob') ?></p>
-    <p>Note: <?= $item->getData('note') ?></p>
-    <p>Salary: <?= $item->getData('salary') ?></p>
-    <p>Service years: <?= $item->getData('service_years') ?></p>
-    <p>VAT Number: <?= $item->getData('vat_number') ?></p>
-    <hr><br/><br/>
-<?php endforeach; ?>
-
+<table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+        <?php foreach ($employee as $item) :?>
+            <tr>
+                <td> <?= $item->getData('entity_id') ?> </td>
+                <td> <?= $item->getData('firstname') ?> </td>
+                <td> <?= $item->getData('lastname') ?> </td>
+                <td> <?= $item->getData('email') ?> </td>
+                <td><?= $item->getDepartment()->getName() ?> </td>
+            </tr>
+        <?php endforeach; ?>
+</table>

@@ -29,6 +29,7 @@
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">
                 Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider
+                <!--Thay bằng Ui...DataProvider-->
             </argument>
             <argument name="name" xsi:type="string">son_office_listing_data_source_employee</argument>
             <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
