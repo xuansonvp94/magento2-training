@@ -23,12 +23,13 @@ class DataProvider extends AbstractDataProvider
 
     /**
      * DataProvider constructor.
-     * @param $name
-     * @param $primaryFieldName
+     * @param string $name
+     * @param string $primaryFieldName
+     * @param string $requestFieldName
      * @param CollectionFactory $collectionFactory
-     * @param $requestFieldName
      * @param array $meta
      * @param array $data
+     * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function __construct(
         $name,
@@ -36,8 +37,8 @@ class DataProvider extends AbstractDataProvider
         $requestFieldName,
         CollectionFactory $collectionFactory,
         array $meta = [],
-        array $data = []
-    ) {
+        array $data = [])
+    {
         $colection = $collectionFactory->create();
         $colection->addAttributeToSelect('*');
         $this->collection = $colection;

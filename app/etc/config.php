@@ -244,6 +244,7 @@ return [
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
         'Son_HelloWorld' => 1,
+        'Son_Knockout' => 1,
         'Son_Office' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,

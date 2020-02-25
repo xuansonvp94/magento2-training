@@ -2,12 +2,11 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <title>Employees</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+        <title>Edit Employees</title>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Son\Office\Block\Frontend\Employee" name="employee_list" template="Son_Office::employee/list.phtml"/>
+            <block class="Son\Office\Block\Frontend\Employee" name="employee_edit" template="Son_Office::employee/edit.phtml"/>
         </referenceContainer>
     </body>
 </page>

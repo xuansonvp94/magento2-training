@@ -4,11 +4,15 @@ namespace Son\Office\Controller\Employee;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
-use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\Registry;
+use Magento\Framework\View\Result\PageFactory;
 
-class Index extends Action
+/**
+ * Class Edit
+ * @package Son\Office\Controller\Employee
+ */
+class Edit extends Action
 {
     /**
      * @var PageFactory $pageFactory
@@ -25,9 +29,8 @@ class Index extends Action
      */
     protected $_coreRegistry;
 
-
     /**
-     * Index constructor.
+     * Edit constructor.
      * @param Context $context
      * @param PageFactory $pageFactory
      * @param Http $request
@@ -40,9 +43,9 @@ class Index extends Action
         Registry $coreRegistry
     )
     {
+        $this->pageFactory = $pageFactory;
         $this->_coreRegistry = $coreRegistry;
         $this->request = $request;
-        $this->pageFactory = $pageFactory;
         parent::__construct($context);
     }
 
