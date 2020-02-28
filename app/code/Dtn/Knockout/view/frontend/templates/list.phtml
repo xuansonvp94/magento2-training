@@ -1,0 +1,17 @@
+<div data-bind="scope:'employeelist'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "list": {
+               "components": {
+                    "employeelist": {
+                        "component": "Dtn_Knockout/js/list",
+                        "employeeJson": <?php echo $block->getEmployeeJson(); ?>
+                        }
+                    }
+                }
+            }
+    }
+    </script>
+</div>

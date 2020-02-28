@@ -1,0 +1,54 @@
+<button data-bind="event: {click: createPopup}">Add New Employee</button>
+<div id="employee-popup-modal" style="display: none">
+    <br>
+    <form data-role="save" data-bind="submit:save" >
+        <input type="hidden" name="entity_id"/>
+        <label for="department">Department</label>
+        <select name="department" id="department" data-validate="{'required-entry':true}" required>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Support">Support</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+        <br><br>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" data-validate="{'required-entry':true}" required/>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" data-validate="{'required-entry':true}" required/>
+        <br><br>
+        <label for="salary">Salary</label>
+        <input type="text" name="salary" id="salary" data-validate="{'required-entry':true}" required/>
+        <br><br>
+        <button type="submit" >Save</button>
+    </form>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Department</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Salary</td>
+        <td>Action</td>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach: employees()">
+    <tr>
+        <td data-bind="text: entity_id"></td>
+        <td data-bind="text: department"></td>
+        <td data-bind="text: name"></td>
+        <td data-bind="text: email"></td>
+        <td data-bind="text: salary"></td>
+        <td>
+            <button type="button" data-bind="click : $parent.createPopup.bind($parent)">Edit</button>
+        </td>
+        <td>
+            <button type="button" data-bind="click : $parent.delete.bind($parent)">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+

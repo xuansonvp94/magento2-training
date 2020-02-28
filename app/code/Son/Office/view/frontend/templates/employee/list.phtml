@@ -5,12 +5,20 @@ $departments = $block->getDepartmentCollection()
 ?>
 
 <!--CDN Fancybox, jquery-->
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
 <script type="text/x-magento-init">
-    "*": {
-            "list": {}
-         }
+
+        "*": {
+            "list": {
+                "components": {
+                    "component": "Son_Office/js/list",
+                    "employeeJson": <?php echo $block->getEmployeeJson(); ?>
+                }
+            }
+        }
+
 </script>
 
 <!--Add New-->
@@ -64,7 +72,8 @@ $departments = $block->getDepartmentCollection()
             <td>
                 <a data-fancybox data-src="#addnewForm" href="javascript:;" onclick="editEmployee(<?php echo $employee->getData('entity_id') ?>);" class="btn btn-primary">Edit</a>
             </td>
-            <td><a href="<?= $block->getUrl('son_office/employee/delete', ['entity_id' => $employee->getId()]) ?>">Delete</a>
+            <td>
+                <a href="<?= $block->getUrl('son_office/employee/delete', ['entity_id' => $employee->getId()]) ?>">Delete</a>
             </td>
         </tr>
     <?php endforeach; ?>
