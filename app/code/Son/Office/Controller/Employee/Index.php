@@ -25,7 +25,6 @@ class Index extends Action
      */
     protected $_coreRegistry;
 
-
     /**
      * Index constructor.
      * @param Context $context

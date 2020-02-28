@@ -107,9 +107,9 @@ define([
 
             delete: function (item)
             {
-                var confirm_delete = confirm('Are you sure to delete ' + item.name + ' ?');
+                var confirmDelete = confirm('Are you sure to delete ' + item.name + ' ?');
                 var self = this;
-                if (confirm_delete) {
+                if (confirmDelete) {
                     var data = item;
                     $.ajax({
                         url: 'delete',
@@ -128,7 +128,5 @@ define([
                         )
                 }
             },
-
-
     });
 });

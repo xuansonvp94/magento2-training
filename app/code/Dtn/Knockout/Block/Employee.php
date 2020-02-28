@@ -7,7 +7,6 @@ use Magento\Framework\Serialize\SerializerInterface;
 use Magento\Framework\View\Element\Template;
 use Dtn\Knockout\Model\EmployeeFactory;
 
-
 class Employee extends Template
 {
     /**
