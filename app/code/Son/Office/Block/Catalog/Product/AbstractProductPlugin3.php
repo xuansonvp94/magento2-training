@@ -4,7 +4,7 @@ namespace Son\Office\Block\Catalog\Product;
 
 class AbstractProductPlugin3
 {
-    public function beforeGetAddToCartUrl(
+   /* public function beforeGetAddToCartUrl(
         $subject,
         $product,
         $additional = []
@@ -27,6 +27,6 @@ class AbstractProductPlugin3
     {
         echo 'Plugin3 - aroundGetAddToCartUrl';
         return $proceed($product, $additional);
-    }
+    }*/
 }
 

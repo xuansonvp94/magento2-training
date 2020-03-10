@@ -34,8 +34,12 @@
 
     <!--Define plugins-->
     <type name="Magento\Catalog\Block\Product\AbstractProduct">
-        <plugin name="officePlugin1" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin1" disabled="false" sortOrder="100"/>
-        <plugin name="officePlugin2" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin2" disabled="false" sortOrder="200"/>
-        <plugin name="officePlugin3" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin3" disabled="false" sortOrder="300"/>
+        <plugin name="officePlugin1" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin1" disabled="true" sortOrder="100"/>
+        <plugin name="officePlugin2" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin2" disabled="true" sortOrder="200"/>
+        <plugin name="officePlugin3" type="Son\Office\Block\Catalog\Product\AbstractProductPlugin3" disabled="true" sortOrder="300"/>
+    </type>
+
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="save-special-request-in-quote" type="Son\Office\Plugin\Checkout\ShippingInformationManagementPlugin" disabled="true" sortOrder="10"/>
     </type>
 </config>

@@ -134,9 +134,4 @@ class Employee extends Template
     {
         return $this->formKey->getFormKey();
     }
-
-    public function getEmployeeJson() {
-        $employees = [];
-
-    }
 }

@@ -244,6 +244,8 @@ return [
         'Klarna_Kp' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
+        'Son_Checkout' => 1,
+        'Son_CustomShipping' => 1,
         'Son_HelloWorld' => 1,
         'Son_Office' => 1,
         'Temando_Shipping' => 1,
