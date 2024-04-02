@@ -5,7 +5,7 @@ namespace Son\Office\Block\Adminhtml\Employee\Edit;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 /**
- * Class BackButton
+ * Class BackButton test
  * @package Son\Office\Block\Adminhtml\Employee\Edit
  */
 class BackButton extends GenericButton implements ButtonProviderInterface
